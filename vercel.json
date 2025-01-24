@@ -45,17 +45,6 @@
         ],
         "destination": "https://vercel-test-redirects-u1wp.vercel.app/:path*",
         "permanent": false
-      },
-      {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "protocol",
-            "value": "http"
-          }
-        ],
-        "destination": "https://vercel-test-redirects-u1wp.vercel.app/:path*",
-        "permanent": false
       }
     ]
   }
