@@ -2,17 +2,32 @@
   "version": 2,
   "redirects": [
     {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml",
+      "statusCode": 200
+    },
+    {
+      "source": "/404.html",
+      "destination": "/404",
+      "statusCode": 200
+    },
+    {
+      "source": "/500.html",
+      "destination": "/500",
+      "statusCode": 200
+    },
+    {
+      "source": "/:path*.:ext(php|htm|html|xhtml|xml)",
+      "destination": "/:path*",
+      "statusCode": 302
+    },
+    {
       "source": "/(.*)//(.*)",
       "destination": "/$1/$2",
       "statusCode": 302
     },
     {
       "source": "/(.*)/$",
-      "destination": "/$1",
-      "statusCode": 302
-    },
-    {
-      "source": "/(?!sitemap\\.xml|404\\.html|500\\.html)(.*)\\.(php|htm|html|xml|xhtml)$",
       "destination": "/$1",
       "statusCode": 302
     },
