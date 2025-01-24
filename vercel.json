@@ -1,0 +1,62 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "^(.*)//(.*)$",
+        "headers": {
+          "Location": "/$1/$2"
+        },
+        "status": 302
+      },
+      {
+        "src": "^/(.*)/$",
+        "headers": {
+          "Location": "/$1"
+        },
+        "status": 302
+      },
+      {
+        "src": "^(?!/(sitemap\\.xml|404\\.html|500\\.html))(.*)\\.(php|htm|html|xml|xhtml)$",
+        "headers": {
+          "Location": "/$2"
+        },
+        "status": 302
+      },
+      {
+        "src": "^/(index)(\\.(php|html|xhtml|htm|xml))?$",
+        "headers": {
+          "Location": "/"
+        },
+        "status": 302
+      },
+      {
+        "src": "^/(index|default|home|test)(\\.(php|html|xhtml|htm|xml))?$",
+        "status": 404
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.example.com"
+          }
+        ],
+        "destination": "https://example.com/:path*",
+        "permanent": false
+      },
+      {
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "protocol",
+            "value": "http"
+          }
+        ],
+        "destination": "https://example.com/:path*",
+        "permanent": false
+      }
+    ]
+  }
+  
