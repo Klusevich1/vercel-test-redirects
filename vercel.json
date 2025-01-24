@@ -46,6 +46,18 @@
       ],
       "destination": "https://vercel-test-redirects-inky.vercel.app/:path*",
       "permanent": false
+    },
+    {
+      "source": "/:path*", 
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vercel-test-redirects-inky.vercel.app"
+        }
+      ],
+      "destination": "https://vercel-test-redirects-inky.vercel.app/:path*",
+      "statusCode": 301
     }
+    
   ]
 }
