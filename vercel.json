@@ -32,12 +32,12 @@
       "statusCode": 302
     },
     {
-      "source": "/index(?:\\.(?:php|html|xhtml|htm|xml))?",
+      "source": "^\\/index(?:\\.(?:php|html|xhtml|htm|xml))?$",
       "destination": "/",
       "statusCode": 302
     },
     {
-      "source": "/:page(index|default|home|test):ext(\\.(php|html|xhtml|htm|xml))?",
+      "source": "^\\/(?:index|default|home|test)(?:\\.(?:php|html|xhtml|htm|xml))?$",
       "destination": "/404.html",
       "statusCode": 404
     },
