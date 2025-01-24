@@ -40,10 +40,10 @@
         "has": [
           {
             "type": "host",
-            "value": "www.vercel-test-redirects-u1wp.vercel.app/"
+            "value": "www.vercel-test-redirects-h2zc.vercel.app/"
           }
         ],
-        "destination": "https://vercel-test-redirects-u1wp.vercel.app/:path*",
+        "destination": "https://vercel-test-redirects-h2zc.vercel.app/:path*",
         "permanent": false
       }
     ]
