@@ -40,10 +40,10 @@
         "has": [
           {
             "type": "host",
-            "value": "www.example.com"
+            "value": "www.vercel-test-redirects-u1wp.vercel.app/"
           }
         ],
-        "destination": "https://example.com/:path*",
+        "destination": "https://vercel-test-redirects-u1wp.vercel.app/:path*",
         "permanent": false
       },
       {
@@ -54,7 +54,7 @@
             "value": "http"
           }
         ],
-        "destination": "https://example.com/:path*",
+        "destination": "https://vercel-test-redirects-u1wp.vercel.app/:path*",
         "permanent": false
       }
     ]
