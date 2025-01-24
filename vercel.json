@@ -1,51 +1,41 @@
 {
-    "version": 2,
-    "routes": [
-      {
-        "src": "^(.*)//(.*)$",
-        "headers": {
-          "Location": "/$1/$2"
-        },
-        "status": 302
-      },
-      {
-        "src": "^/(.*)/$",
-        "headers": {
-          "Location": "/$1"
-        },
-        "status": 302
-      },
-      {
-        "src": "^(?!/(sitemap\\.xml|404\\.html|500\\.html))(.*)\\.(php|htm|html|xml|xhtml)$",
-        "headers": {
-          "Location": "/$2"
-        },
-        "status": 302
-      },
-      {
-        "src": "^/(index)(\\.(php|html|xhtml|htm|xml))?$",
-        "headers": {
-          "Location": "/"
-        },
-        "status": 302
-      },
-      {
-        "src": "^/(index|default|home|test)(\\.(php|html|xhtml|htm|xml))?$",
-        "status": 404
-      }
-    ],
-    "redirects": [
-      {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "host",
-            "value": "www.vercel-test-redirects-inky.vercel.app/"
-          }
-        ],
-        "destination": "https://vercel-test-redirects-inky.vercel.app/:path*",
-        "permanent": false
-      }
-    ]
-  }
-  
+  "version": 2,
+  "redirects": [
+    {
+      "source": "/(.*)//(.*)",
+      "destination": "/$1/$2",
+      "statusCode": 302
+    },
+    {
+      "source": "/(.*)/$",
+      "destination": "/$1",
+      "statusCode": 302
+    },
+    {
+      "source": "/(?!sitemap\\.xml|404\\.html|500\\.html)(.*)\\.(php|htm|html|xml|xhtml)$",
+      "destination": "/$1",
+      "statusCode": 302
+    },
+    {
+      "source": "/(index)(\\.(php|html|xhtml|htm|xml))?$",
+      "destination": "/",
+      "statusCode": 302
+    },
+    {
+      "source": "/(index|default|home|test)(\\.(php|html|xhtml|htm|xml))?$",
+      "destination": "/404.html",
+      "statusCode": 404
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vercel-test-redirects-inky.vercel.app"
+        }
+      ],
+      "destination": "https://vercel-test-redirects-inky.vercel.app/:path*",
+      "permanent": false
+    }
+  ]
+}
